@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "serve": "webpack-dev-server --progress --inline --content-base ./dist/"
+    "serve": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",

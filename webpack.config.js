@@ -1,9 +1,13 @@
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: './dist/bundle.js'
+    filename: './dist/bundle.js',
+    publicPath: './dist'
   },
   devtool: 'source-map',
+  devServer: {
+    contentBase: "./dist",
+  },
   resolve: {
     extensions: ['.js', '.jsx']
   },
