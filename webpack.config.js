@@ -1,12 +1,15 @@
+var path = require('path');
+
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    filename: './dist/bundle.js',
-    publicPath: './dist'
+    path: path.join(__dirname, '/dist/assets/'),
+    filename: 'bundle.js',
+    publicPath: '/assets/'
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: "./dist",
+    contentBase: "dist",
   },
   resolve: {
     extensions: ['.js', '.jsx']
