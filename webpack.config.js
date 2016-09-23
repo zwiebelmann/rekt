@@ -1,4 +1,5 @@
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -9,6 +10,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
+    inline: true,
     contentBase: "dist",
   },
   resolve: {
@@ -25,5 +27,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
